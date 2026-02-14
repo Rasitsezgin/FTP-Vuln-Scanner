@@ -1,9 +1,4 @@
 #!/bin/bash
-#
-# FTP PenTest Framework - Quick Start Script
-# Bu script, yaygın senaryolar için hazır komutlar sağlar
-#
-
 # Renkler
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -17,7 +12,7 @@ cat << "EOF"
 ╔═══════════════════════════════════════════════════════════════╗
 ║                                                               ║
 ║     FTP PenTest Framework - Quick Start                      ║
-║     Version 3.0                                               ║
+║                                                               ║
 ║                                                               ║
 ╚═══════════════════════════════════════════════════════════════╝
 EOF

@@ -6,7 +6,7 @@ import os
 import sys
 import random
 import string
-from ftplib import FTP
+from ftplib import FTP 
 
 def get_random_name():
    letters = string.ascii_letters

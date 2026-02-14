@@ -14,8 +14,8 @@ echo -e "${BLUE}"
 cat << "EOF"
 ╔═══════════════════════════════════════════════════════════════╗
 ║                                                               ║
-║     FTP PenTest Framework - Installation Script              ║
-║     Version 3.0                                               ║
+║     FTP PenTest Framework - Installation Script               ║
+║                                                               ║
 ║                                                               ║
 ╚═══════════════════════════════════════════════════════════════╝
 EOF

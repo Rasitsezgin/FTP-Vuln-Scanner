@@ -1,4 +1,9 @@
 #!/bin/bash
+#
+# FTP PenTest Framework - Quick Start Script
+# Bu script, yaygın senaryolar için hazır komutlar sağlar
+#
+
 # Renkler
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -11,7 +16,7 @@ echo -e "${BLUE}"
 cat << "EOF"
 ╔═══════════════════════════════════════════════════════════════╗
 ║                                                               ║
-║     FTP PenTest Framework - Quick Start                      ║
+║     FTP PenTest Framework - Quick Start                       ║
 ║                                                               ║
 ║                                                               ║
 ╚═══════════════════════════════════════════════════════════════╝
@@ -19,9 +24,11 @@ EOF
 echo -e "${NC}"
 
 # Yasal Uyarı
-echo -e "${RED}═══════════════════════════════════════════════════════════════"            
+echo -e "${RED}═══════════════════════════════════════════════════════════════"
 echo -e "═══════════════════════════════════════════════════════════════${NC}"
+echo ""
 
+echo ""
 read -p "Devam etmek için 'GO' yazın: " accept
 
 if [ "$accept" != "KABUL" ]; then
@@ -51,7 +58,7 @@ case $choice in
         read -p "Hedef IP: " target
         
         echo -e "${GREEN}[+] Komut çalıştırılıyor...${NC}"
-        python3 FTPVulnScanner.py -t "$target" -v
+        python3 ftp_pentest_framework.py -t "$target" -v
         ;;
         
     2)
@@ -62,7 +69,7 @@ case $choice in
         echo ""
         
         echo -e "${GREEN}[+] Komut çalıştırılıyor...${NC}"
-        python3 FTPVulnScanner.py -t "$target" -u "$username" -pw "$password" -v
+        python3 ftp_pentest_framework.py -t "$target" -u "$username" -pw "$password" -v
         ;;
         
     3)
@@ -74,7 +81,7 @@ case $choice in
         
         if [ "$confirm" = "y" ]; then
             echo -e "${GREEN}[+] Komut çalıştırılıyor...${NC}"
-            python3 FTPVulnScanner.py -t "$target" --brute-force -v
+            python3 ftp_pentest_framework.py -t "$target" --brute-force -v
         else
             echo -e "${RED}İşlem iptal edildi.${NC}"
         fi
@@ -99,7 +106,7 @@ case $choice in
         
         read -p "Brute force etkinleştirilsin mi? (y/n): " brute
         
-        cmd="python3 FTPVulnScanner.py -t $target -p $port"
+        cmd="python3 ftp_pentest_framework.py -t $target -p $port"
         
         if [ ! -z "$reverse_ip" ]; then
             cmd="$cmd -r $reverse_ip"
@@ -123,7 +130,7 @@ case $choice in
         read -p "Hedef IP: " target
         
         echo -e "${GREEN}[+] Komut çalıştırılıyor (exploitation devre dışı)...${NC}"
-        python3 FTPVulnScanner.py -t "$target" --no-listener -v
+        python3 ftp_pentest_framework.py -t "$target" --no-listener -v
         ;;
         
     6)
@@ -169,7 +176,7 @@ case $choice in
         echo ""
         
         echo -e "${GREEN}[+] Komut çalıştırılıyor...${NC}"
-        python3 FTPVulnScanner.py -t "$target" --brute-force -v
+        python3 ftp_pentest_framework.py -t "$target" --brute-force -v
         ;;
         
     8)

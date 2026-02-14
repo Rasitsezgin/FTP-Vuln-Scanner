@@ -208,33 +208,3 @@ export TERM=xterm
 stty raw -echo; fg
 reset
 ```
-
----
-
-## 📊 Örnek Çıktı
-
-```
-╔═══════════════════════════════════════════════════════════════════════════╗
-║   ███████╗████████╗██████╗     ██████╗ ███████╗███╗   ██╗████████╗      ║
-║   ██╔════╝╚══██╔══╝██╔══██╗    ██╔══██╗██╔════╝████╗  ██║╚══██╔══╝      ║
-║   █████╗     ██║   ██████╔╝    ██████╔╝█████╗  ██╔██╗ ██║   ██║         ║
-║              Advanced FTP Penetration Testing Framework v3.0             ║
-╚═══════════════════════════════════════════════════════════════════════════╝
-
-[Phase 1] Establishing FTP connection...
-✓ Successfully authenticated as 'anonymous'
-
-[Phase 2] Scanning for vulnerabilities...
-✗ VULNERABLE: Anonymous access enabled
-✗ CRITICAL: SITE EXEC vulnerable
-✓ Writable directory found: /var/www/html
-
-[Phase 3] Starting reverse shell listener...
-✓ Listener started successfully
-
-[Phase 4] Attempting exploitation...
-✓ SUCCESS: SITE EXEC Direct worked!
-
-[Phase 5] Generating report...
-✓ Report saved to: ftp_pentest_report_20260213_193045.txt
-```
